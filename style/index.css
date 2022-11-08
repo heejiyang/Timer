@@ -66,3 +66,24 @@ body {
     width: 6px;
     height: 26px;
 }
+
+.btn-area {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 12px;
+}
+
+button {
+    width: 112px;
+    height: 48px;
+    color: #617199;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    background: #324577;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+}

@@ -24,10 +24,6 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 
-img {
-	vertical-align: top;
-}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -47,24 +43,8 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
 button {
 	cursor: pointer;
-}
-
-.txt-hide {
-	position: absolute;
-	overflow: hidden;
-	clip-path: inset(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-}
-
-a {
-	text-decoration: none;
+	border-style: none;
 }

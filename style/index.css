@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 1280px;
+    height: 720px;
+    font-family: 'Pretendard-Regular';
+    text-align: center;
+    background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+#timer {
+    width: 400px;
+    height: 360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 20px 20px 60px 10px #374B7C66;
+    background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+}
+.img-logo {
+    width: 244px;
+    height: 48px;
+    display: block;
+    margin: 72px auto 60px;
+}
+
+.txt-timer {
+    font-family: 'Pretendard-Regular';
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.clock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.clock li {
+    padding: 16px 14px 16px 13px;
+}
+
+.clock div {
+    width: 80px;
+    height: 80px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: 1px solid #354971;
+    border-radius: 4px;
+    background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%), linear-gradient(0deg, #354971, #354971);
+}
+
+.clock img {
+    width: 6px;
+    height: 26px;
+}

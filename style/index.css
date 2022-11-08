@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 16px;
     box-shadow: 20px 20px 60px 10px #374B7C66;
     background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
 }

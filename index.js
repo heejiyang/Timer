@@ -41,6 +41,62 @@ const timerStart = () => {
         time--;
         timeSec--;
 
-    // 초가 
-    })
-}
+    // 초가 10보다 작을경우 09, 08 식으로 0을 붙여서 나오게 하기
+        if (timeSec < 10) {
+            secBtn.textContent = timeSec.toString().padStart(2, "0");
+        } else {
+            secBtn.textContent = timeSec;
+        }
+
+    // 초가 0 이 됐을 때 분이 0 이상이면 분을 --; 하고 초를 60초로 할당.
+        if (timeMin >= 1 && timeSec === 0) {
+            timeMin--;
+            if (timeMin < 10) {
+                minBtn.textContent = timeMin.toString().padStart(2, "0");
+            } else {
+                minBtn.textContent = timeMin;
+            }
+
+            timeSec = 60;
+            secBtn.textContent = timeSec;
+        }
+
+        if (time < 1 && timeMin >= 1) {
+            timeMin--;
+            if (timeMin < 10) {
+                minBtn.textContent = timeMin.toString().padStart(2, "0");
+            } else {
+                minBtn.textContent = timeMin;
+            }
+            timeSec = 59;
+            secBtn.textContent = timeSec;
+        }
+
+        if (timeSec < 1 && timeMin < 1 && timeHour >= 1) {
+            timeHour--;
+            if (timeHour < 10) {
+                hrsBtn.textContent = timeHour.toString().padStart(2, "0");
+            } else {
+                hrsBtn.textContent = timeHour;
+            }
+            timeMin = 59;
+            minBtn.textContent = timeMin;
+            timeSec = 59;
+            secBtn.textContent = timeSec;
+        }
+
+    // 전부 0이 됐을경우 타이머를 멈추고 초기 상태로 되돌리기
+        if (timeSec < 1 && timeMin < 1 && timeHour < 1) {
+            clearInterval(timer);
+
+            startBtn.disabled = true;
+            resetBtn.disabled = true;
+            startBtnImg.src = "assets/icon-start-disabled.svg";
+            resetBtnImg.src = "assets/icon-reset-disabled.svg";
+            stopBtn.classList.remove("active");
+            startBtn.classList.add("active");
+        }
+    }, 1000);
+};
+
+// 리셋 누를 경우 타이머 멈추고 리셋
